@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Card } from "../../atom/card/Card";
+import { UserlconWithName } from "./UserIconWithName";
 
 const user = {
   name: "まさ",
@@ -13,9 +15,8 @@ const user = {
 
 export const UserCard = () => {
   return (
-    <div>
-      <img height={160} src={user.image} alt={user.name} />
-      <p>{user.name}</p>
+    <Card>
+      <UserlconWithName name={user.name} image={user.image} />
       <SDl>
         <dt>メール</dt>
         <dd>{user.email}</dd>
@@ -26,7 +27,7 @@ export const UserCard = () => {
         <dt>WEB</dt>
         <dd>{user.website}</dd>
       </SDl>
-    </div>
+    </Card>
   );
 };
 
@@ -39,5 +40,6 @@ const SDl = styled.dl`
   dd {
     padding-left: 32px;
     padding-bottom: 8px;
+    overflow-wrap: break-word;
   }
 `;
