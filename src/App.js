@@ -3,6 +3,7 @@ import { PrimaryButton } from "./components/atom/button/PrimaryButton";
 import { SecondaryButton } from "./components/atom/button/SecondaryButton";
 import { SeachInput } from "./components/molecules/SeachInput";
 import { UserCard } from "./components/organisms/user/UserCard";
+import { DefaultLayout } from "./components/templates/DefaultLayout";
 import { Headeronly } from "./components/templates/HeaderOnly";
 import "./styles.css";
 
@@ -20,12 +21,13 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <Headeronly />
-      <PrimaryButton>ボタン</PrimaryButton>
-      <SecondaryButton>検索</SecondaryButton>
-      <br />
-      <SeachInput />
-      <UserCard user={user} />
+      <DefaultLayout>
+        <PrimaryButton>ボタン</PrimaryButton>
+        <SecondaryButton>検索</SecondaryButton>
+        <br />
+        <SeachInput />
+        <UserCard user={user} />
+      </DefaultLayout>
     </BrowserRouter>
   );
 }

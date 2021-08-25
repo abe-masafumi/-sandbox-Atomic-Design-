@@ -1,3 +1,5 @@
 body {
   background: #e4f59f4e;
+  margin: 0;
+  min-height: 100vh;
 }
